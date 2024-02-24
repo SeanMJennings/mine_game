@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "mine_game"
+version = "0.1.0"
+description = "A simple mine game"
+authors = ["Curious Consistency"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+colorama = "^0.4.6"
+iniconfig = "^2.0.0"
+packaging = "^23.2"
+pluggy = "^1.4.0"
+pytest = "^8.0.0"
+
+[tool.poetry.scripts]
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+  "testing"
+]
