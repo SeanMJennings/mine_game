@@ -20,6 +20,16 @@ try {
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
  
- (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python
- [Environment]::SetEnvironmentVariable("Path", $env:Path + ";%APPDATA%\Roaming\Python\Scripts", "User")
+try {
+    write-host "nFound Poetry: " -fore yellow
+    poetry --version
+}
+catch {
+    write-host "nInstalling Poetry: " -fore yellow
+    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python
+    if ($env:Path -split ';' -notcontains  $env:APPDATA + "\Roaming\Python\Scripts") {
+       [Environment]::SetEnvironmentVariable("Path", $env:Path + ";%APPDATA%\Roaming\Python\Scripts", "User")
+    }
+}
+
  poetry install
