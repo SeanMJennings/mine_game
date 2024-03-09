@@ -17,8 +17,9 @@ try {
  }
  
  
- python -m venv .venv
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
  
- ./.venv/Scripts/Activate.ps1
- 
+ (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python
+ [Environment]::SetEnvironmentVariable("Path", $env:Path + ";%APPDATA%\Roaming\Python\Scripts", "User")
  poetry install
