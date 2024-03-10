@@ -1,9 +1,9 @@
 from .board import Direction
 
 class Player:
-    def __init__(self, x : int, y : int):
-        self._x = x
-        self._y = y
+    def __init__(self, position: tuple[int, int]):
+        self._x = position[0]
+        self._y = position[1]
 
     @property
     def x(self):

@@ -18,7 +18,7 @@ class Board:
         if (self._player.x - 1 >= 0):
           self._player.move(direction)     
       case Direction.right:
-        if (self._player.x - 1 <= self._dimensions[0] - 1):
+        if (self._player.x + 1 <= self._dimensions[0] - 1):
           self._player.move(direction)
   def get_player(self):
     return self._player
