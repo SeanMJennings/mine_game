@@ -1,25 +1,24 @@
-from enum import Enum
+from .direction import Direction
 from .player import Player
 
-class Direction(Enum):
-  up = 'up',
-  down = 'down',
-  left = 'left',
-  right = 'right'
-
 class Board:
-  def __init__(self, player : Player):
+  def __init__(self, player: Player, dimensions: tuple[int,int]):
     self._player = player
-  def move_player(self, direction : Direction):
+    self._dimensions = dimensions
+  def move_player(self, direction: Direction):
     direction = Direction[direction.lower()]
     match direction:
       case Direction.up:
-        self._player.y += 1      
+        if (self._player.y + 1 <= self._dimensions[1] - 1):
+          self._player.move(direction)  
       case Direction.down:
-        self._player.y -= 1      
+        if (self._player.y - 1 >= 0):
+          self._player.move(direction)      
       case Direction.left:
-        self._player.x -= 1      
+        if (self._player.x - 1 >= 0):
+          self._player.move(direction)     
       case Direction.right:
-        self._player.x += 1
+        if (self._player.x - 1 <= self._dimensions[0] - 1):
+          self._player.move(direction)
   def get_player(self):
     return self._player
