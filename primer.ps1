@@ -5,6 +5,9 @@ try {
  catch {
      write-host "`Installing Chocolatey: " -fore yellow
      Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | Invoke-Expression
+     if ($env:Path -split ';' -notcontains  $env:ALLUSERSPROFILE + "\chocolatey\bin") {
+        [Environment]::SetEnvironmentVariable("Path", $env:Path + ";%ALLUSERSPROFILE%\chocolatey\bin", "User")
+     }
  }
  
  try {
@@ -16,8 +19,12 @@ try {
      choco install python
  }
  
- 
-python -m venv .venv
+
+try {
+    python -m venv .venv
+}
+catch {}
+
 .\.venv\Scripts\Activate.ps1
  
 try {
