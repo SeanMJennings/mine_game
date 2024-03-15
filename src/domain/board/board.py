@@ -14,7 +14,7 @@ class Board:
     match direction:
       case Direction.up:
         if (self.__inside_top_of_board()):
-          self._player.move(direction)  
+          self._player.move(direction)
       case Direction.down:
         if (self.__inside_bottom_of_board()):
           self._player.move(direction)      
@@ -24,6 +24,7 @@ class Board:
       case Direction.right:
         if (self.__inside_right_of_board()):
           self._player.move(direction)
+    self.check_for_mine()
 
   def __inside_right_of_board(self):
       return self._player.x + 1 <= self._dimensions[0] - 1
@@ -36,6 +37,11 @@ class Board:
 
   def __inside_top_of_board(self):
       return self._player.y + 1 <= self._dimensions[1] - 1
+    
+  def check_for_mine(self):
+    mine = list(filter(lambda mine: mine.position[0] == self._player.x and mine.position[1] == self._player.y, self._mines))
+    if (len(mine) == 1):
+      self._player.mine_hit()
     
   def get_player(self):
     return self._player

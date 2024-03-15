@@ -1,6 +1,6 @@
 from src.domain.board.board import Board
 from src.domain.player import Player
-from testing.domain.board.fake_mine_generator import FakeMineGenerator
+from testing.domain.board.fakes.fake_mine_generator import FakeMineGenerator
 board = None
 player = None
 
@@ -24,4 +24,4 @@ def _a_player_moves_to(position):
     assert player.x == position[0]
     assert player.y == position[1]
 def a_player_detonates_a_mine(*args):
-    player
+    assert player.mines_detonated == 1
