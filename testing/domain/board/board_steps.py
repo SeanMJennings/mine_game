@@ -1,4 +1,4 @@
-from src.domain.board import Board
+from src.domain.board.board import Board
 from src.domain.player import Player
 board = None
 player = None

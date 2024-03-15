@@ -1,4 +1,4 @@
-from .board import Direction
+from .board.board import Direction
 
 class Player:
     
