@@ -1,5 +1,5 @@
 import pytest
-import random
+from random import Random
 from pytest_mock import MockerFixture
 from src.domain.board.mine_generator import MineGenerator
 
@@ -9,20 +9,19 @@ random_generator = None
 mines = None
 
 def a_mine_generator(*args):
-    global board_dimensions, mine_generator
+    global mine_generator, board_dimensions
     board_dimensions = (5,5)
-    def _random():
-        return 1
-    fake_random_generator = type('', (object,), {'random': _random})
+    def always_one():
+        return 1.0
     mock = MockerFixture(None)
-    random_generator = mock.patch.object(random, 'random', fake_random_generator)
+    random_generator = mock.patch.object(Random, 'random', type('', (object,), {'random': always_one}))
     mine_generator = MineGenerator(random_generator, board_dimensions)
     
 def generating_mines(*args):
     global mine_generator, mines
     mines = mine_generator.generate_mines()
     
-def the_board_is_filled_with_mines(*args):
+def the_board_is_filled_with_undetonated_mines(*args):
     global mines, board_dimensions
     assert len(mines) == board_dimensions[0] * board_dimensions[1]
     index = 0

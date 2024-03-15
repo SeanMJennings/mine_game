@@ -1,11 +1,13 @@
 from .direction import Direction
 from ..player import Player
+from .mine_generator import MineGenerator
 
 class Board:
   
-  def __init__(self, player: Player, dimensions: tuple[int,int]):
+  def __init__(self, player: Player, dimensions: tuple[int,int], mine_generator: MineGenerator):
     self._player = player
     self._dimensions = dimensions
+    self._mines = mine_generator.generate_mines()
     
   def move_player(self, direction: Direction):
     direction = Direction[direction.lower()]
