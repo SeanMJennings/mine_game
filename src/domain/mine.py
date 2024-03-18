@@ -11,4 +11,7 @@ class Mine:
   @property
   def detonated(self):
     return self._detonated
+  
+  def detonate(self):
+    self._detonated = True
       

@@ -14,8 +14,7 @@ def a_board_of_size(dimensions: tuple[int,int]):
     global player
     board = Board(player, dimensions, FakeMineGenerator(False, dimensions))
 def a_board_full_of_mines_with_size(dimensions: tuple[int,int]):
-    global board
-    global player
+    global board, player
     board = Board(player, dimensions, FakeMineGenerator(True, dimensions))
 def a_player_moves_to(position):
     _a_player_moves_to(position)
@@ -25,3 +24,5 @@ def _a_player_moves_to(position):
     assert player.y == position[1]
 def a_player_detonates_a_mine(*args):
     assert player.mines_detonated == 1
+def the_mine_only_detonates_once(*args):
+    a_player_detonates_a_mine()

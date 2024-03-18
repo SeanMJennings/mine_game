@@ -39,8 +39,9 @@ class Board:
       return self._player.y + 1 <= self._dimensions[1] - 1
     
   def check_for_mine(self):
-    mine = list(filter(lambda mine: mine.position[0] == self._player.x and mine.position[1] == self._player.y, self._mines))
-    if (len(mine) == 1):
+    mines = list(filter(lambda mine: mine.position[0] == self._player.x and mine.position[1] == self._player.y and mine.detonated == False, self._mines))
+    if (len(mines) == 1):
+      mines[0].detonate()
       self._player.mine_hit()
     
   def get_player(self):
