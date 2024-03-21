@@ -20,7 +20,7 @@ class MineGame:
     def move(self, direction: Direction):
         if (self.__status == "InPlay"):
             self.__board.move_player(direction)
-        self.__calculate_status()
+            self.__calculate_status()
         
     def __calculate_status(self):
         if (self.__board.get_player().mines_detonated == self.__mine_limit):

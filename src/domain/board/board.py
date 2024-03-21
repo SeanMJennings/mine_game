@@ -24,7 +24,7 @@ class Board:
       case Direction.right:
         if (self.__inside_right_of_board()):
           self.__player.move(direction)
-    self.check_for_mine()
+    self.__check_for_mine()
 
   def __inside_right_of_board(self):
       return self.__player.x + 1 <= self.__dimensions[0] - 1
@@ -38,7 +38,7 @@ class Board:
   def __inside_top_of_board(self):
       return self.__player.y + 1 <= self.__dimensions[1] - 1
     
-  def check_for_mine(self):
+  def __check_for_mine(self):
     mines = list(filter(lambda mine: mine.position[0] == self.__player.x and mine.position[1] == self.__player.y and mine.detonated == False, self.__mines))
     if (len(mines) == 1):
       mines[0].detonate()
