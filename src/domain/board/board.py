@@ -1,6 +1,6 @@
-from .direction import Direction
-from ..player import Player
-from .mine_generator import MineGenerator
+from src.domain.board.direction import Direction
+from src.domain.player import Player
+from src.domain.board.mine_generator import MineGenerator
 
 class Board:
   

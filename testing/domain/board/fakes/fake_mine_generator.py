@@ -15,7 +15,6 @@ class FakeMineGenerator():
             self.__random_generator = mock.patch.object(Random, 'random', type('', (object,), {'random': always_one}))
         else:
             self.__random_generator = mock.patch.object(Random, 'random', type('', (object,), {'random': always_zero}))
-        self.__random_generator.random()
         self.__mine_generator = MineGenerator(self.__random_generator, self.__board_dimensions)
     def generate_mines(self):
         return self.__mine_generator.generate_mines()

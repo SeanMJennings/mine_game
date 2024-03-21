@@ -1,5 +1,6 @@
 import random
-from ..mine import Mine
+from src.domain.mine import Mine
+
 class MineGenerator:
     
     def __init__(self, random_generator: random, board_dimensions: tuple[int,int]):

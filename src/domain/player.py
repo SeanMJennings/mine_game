@@ -1,4 +1,4 @@
-from .board.board import Direction
+from src.domain.board.direction import Direction
 
 class Player:
     
@@ -22,7 +22,7 @@ class Player:
         self.__y = value
         
     @property
-    def get_mines_detonated(self):
+    def mines_detonated(self):
         return self.__mines_detonated
     
     def __set_mines_detonated(self, value : int):

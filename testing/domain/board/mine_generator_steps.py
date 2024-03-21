@@ -1,4 +1,3 @@
-import pytest
 from random import Random
 from pytest_mock import MockerFixture
 from src.domain.board.mine_generator import MineGenerator
