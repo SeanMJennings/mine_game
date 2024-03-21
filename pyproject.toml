@@ -2,7 +2,7 @@
 name = "mine_game"
 version = "0.1.0"
 description = "A simple mine game"
-authors = ["Curious Consistency"]
+authors = ["Sean Jennings"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

@@ -1,17 +1,17 @@
 class Mine:
   
   def __init__(self, position: tuple[int,int]):
-    self._position = position
-    self._detonated = False
+    self.__position = position
+    self.__detonated = False
     
   @property
   def position(self):
-    return self._position
+    return self.__position
   
   @property
   def detonated(self):
-    return self._detonated
+    return self.__detonated
   
   def detonate(self):
-    self._detonated = True
+    self.__detonated = True
       

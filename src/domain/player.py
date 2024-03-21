@@ -3,41 +3,41 @@ from .board.board import Direction
 class Player:
     
     def __init__(self, position: tuple[int, int]):
-        self._x = position[0]
-        self._y = position[1]
-        self._mines_detonated = 0
+        self.__x = position[0]
+        self.__y = position[1]
+        self.__mines_detonated = 0
 
     @property
     def x(self):
-        return self._x
+        return self.__x
       
-    def __x(self, value : int):
-        self._x = value
+    def __set_x(self, value : int):
+        self.__x = value
 
     @property
     def y(self):
-        return self._y
+        return self.__y
       
-    def __y(self, value : int):
-        self._y = value
+    def __set_y(self, value : int):
+        self.__y = value
         
     @property
-    def mines_detonated(self):
-        return self._mines_detonated
+    def get_mines_detonated(self):
+        return self.__mines_detonated
     
-    def ___mines_detonated(self, value : int):
-        self._mines_detonated += value
+    def __set_mines_detonated(self, value : int):
+        self.__mines_detonated += value
     
     def move(self, direction: Direction):
         match direction:
             case Direction.up:
-                self.__y(self.y + 1)      
+                self.__set_y(self.y + 1)      
             case Direction.down:
-                self.__y(self.y - 1)         
+                self.__set_y(self.y - 1)         
             case Direction.left:
-                self.__x(self.x - 1)       
+                self.__set_x(self.x - 1)       
             case Direction.right:
-                self.__x(self.x + 1)
+                self.__set_x(self.x + 1)
     
     def mine_hit(self):
-        self.___mines_detonated(1)
+        self.__set_mines_detonated(1)
