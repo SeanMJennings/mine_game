@@ -46,3 +46,6 @@ class Board:
     
   def get_player(self):
     return self.__player
+  
+  def get_length_of_board(self):
+    return self.__dimensions[1]
