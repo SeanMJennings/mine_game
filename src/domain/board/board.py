@@ -44,7 +44,7 @@ class Board:
     def __check_for_mine(self):
         mines = list(
             filter(
-                lambda mine: mine.position[0] == self.__player.x 
+                lambda mine: mine.position[0] == self.__player.x
                 and mine.position[1] == self.__player.y
                 and mine.detonated is False,
                 self.__mines,
