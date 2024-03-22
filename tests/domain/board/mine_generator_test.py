@@ -1,5 +1,5 @@
-from testing.specification import *
-from testing.domain.board.mine_generator_steps import *
+from tests.specification import *
+from tests.domain.board.mine_generator_steps import *
 
 
 def test_generates_a_board_with_undetonated_mines():

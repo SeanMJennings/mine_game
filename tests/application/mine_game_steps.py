@@ -1,7 +1,7 @@
 from src.application.mine_game import MineGame
 from src.domain.board.board import Board
 from src.domain.player import Player
-from testing.domain.board.fakes.fake_mine_generator import FakeMineGenerator
+from tests.domain.board.fakes.fake_mine_generator import FakeMineGenerator
 
 mine_game = None
 board = None

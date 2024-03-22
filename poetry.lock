@@ -184,7 +184,7 @@ files = [
 
 [package.extras]
 dev = ["pre-commit", "tox"]
-testing = ["pytest", "pytest-benchmark"]
+tests = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "pycodestyle"
@@ -211,7 +211,7 @@ files = [
 [[package]]
 name = "pytest"
 version = "8.1.1"
-description = "pytest: simple powerful testing with Python"
+description = "pytest: simple powerful tests with Python"
 optional = false
 python-versions = ">=3.8"
 files = [
@@ -228,7 +228,7 @@ pluggy = ">=1.4,<2.0"
 tomli = {version = ">=1", markers = "python_version < \"3.11\""}
 
 [package.extras]
-testing = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
+tests = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
 [[package]]
 name = "pytest-mock"

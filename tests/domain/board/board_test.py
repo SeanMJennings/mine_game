@@ -1,6 +1,6 @@
 import pytest
-from testing.specification import *
-from testing.domain.board.board_steps import *
+from tests.specification import *
+from tests.domain.board.board_steps import *
 
 
 @pytest.mark.parametrize(

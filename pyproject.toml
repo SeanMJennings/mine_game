@@ -29,7 +29,7 @@ addopts = [
     "--import-mode=importlib",
 ]
 testpaths = [
-  "testing"
+  "tests"
 ]
 pythonpath = "src"
 

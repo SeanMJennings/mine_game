@@ -1,5 +1,5 @@
-from testing.specification import *
-from testing.application.mine_game_steps import *
+from tests.specification import *
+from tests.application.mine_game_steps import *
 
 
 def test_returns_game_overview():

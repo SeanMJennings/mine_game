@@ -1,9 +1,9 @@
 {
-    "python.testing.pytestArgs": [
-        "testing"
+    "python.tests.pytestArgs": [
+        "tests"
     ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
+    "python.tests.unittestEnabled": false,
+    "python.tests.pytestEnabled": true,
     "python.terminal.activateEnvironment": true,
     "python.formatting.provider": "black"
 }
