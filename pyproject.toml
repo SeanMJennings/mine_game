@@ -7,6 +7,8 @@ authors = ["Sean Jennings"]
 
 [tool.poetry.dependencies]
 python = ">=3.10.4,<4.0"
+
+[tool.poetry.dev-dependencies]
 colorama = "^0.4.6"
 iniconfig = "^2.0.0"
 packaging = "^23.2"
