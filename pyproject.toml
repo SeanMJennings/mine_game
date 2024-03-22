@@ -31,7 +31,9 @@ addopts = [
 testpaths = [
   "tests"
 ]
-pythonpath = .
+pythonpath = [
+  ".", "src",
+]
 
 [virtualenvs]
 create = true
