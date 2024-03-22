@@ -43,7 +43,7 @@ def the_board_is_filled_with_undetonated_mines(*args):
                 continue
             mine = mines[index]
             assert mine.position == (x, y)
-            assert mine.detonated == False
+            assert mine.detonated is False
             index = index + 1
 
 
