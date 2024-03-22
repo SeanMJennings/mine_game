@@ -28,6 +28,5 @@
         "zeshuaro.vscode-python-poetry"
       ]
     }
- },
- "onCreateCommand": "powershell.exe ./.devcontainer/setupMyDevContainer.ps1"
+ }
 }
