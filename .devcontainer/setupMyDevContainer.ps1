@@ -3,6 +3,6 @@ try {
 }
 catch {}
 
-.\.venv\Scripts\Activate.ps1
+.venv/bin/Activate.ps1
 
 poetry install

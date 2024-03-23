@@ -1,8 +1,9 @@
 {
   "name": "Python development",
-  "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.12",
   "features": {
     "ghcr.io/devcontainers/features/powershell:1": {},
     "ghcr.io/devcontainers-contrib/features/poetry:2": {}
-  }
+  },
+  "postCreateCommand": "powershell.exe ./.devcontainer/setupMyDevContainer.ps1"
 }

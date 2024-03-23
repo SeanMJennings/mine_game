@@ -6,7 +6,7 @@ description = "A simple mine game"
 authors = ["Sean Jennings"]
 
 [tool.poetry.dependencies]
-python = ">=3.10.4,<4.0"
+python = ">=3.12,<4.0"
 
 [tool.poetry.dev-dependencies]
 colorama = "^0.4.6"
