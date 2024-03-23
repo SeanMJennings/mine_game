@@ -20,7 +20,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v5
         with:
-            python-version: '3.10.4'
+            python-version: '3.12'
             cache: 'poetry'
       - name: Lint using Flake8
         uses: py-actions/flake8@v2
