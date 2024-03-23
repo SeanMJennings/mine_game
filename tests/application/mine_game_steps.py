@@ -1,4 +1,5 @@
 from mine_game.application.mine_game import MineGame
+from mine_game.application.game_status import GameStatus
 from mine_game.domain.board.board import Board
 from mine_game.domain.player import Player
 from mine_game.domain.board.direction import Direction
@@ -28,7 +29,7 @@ def requesting_game_overview(*args):
 
 def the_overview_is_returned(*args):
     global game_overview
-    assert game_overview.game_status == "InPlay"
+    assert game_overview.game_status == GameStatus.Active
     assert game_overview.player_position == (0, 0)
     assert game_overview.mines_detonated == 0
 
@@ -55,7 +56,7 @@ def moving_to_top_of_board(*args):
 def the_game_is_lost(*args):
     global mine_game, game_overview
     game_overview = mine_game.get_overview()
-    assert game_overview.game_status == "Lost"
+    assert game_overview.game_status == GameStatus.Lost
     assert game_overview.mines_detonated == 3
     assert game_overview.player_position == (0, 3)
 
@@ -63,7 +64,7 @@ def the_game_is_lost(*args):
 def the_game_is_won(*args):
     global mine_game, game_overview
     game_overview = mine_game.get_overview()
-    assert game_overview.game_status == "Won"
+    assert game_overview.game_status == GameStatus.Won
     assert game_overview.mines_detonated == 0
     assert game_overview.player_position == (0, 7)
 

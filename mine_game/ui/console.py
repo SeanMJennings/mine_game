@@ -3,6 +3,7 @@ from mine_game.domain.board.board import Board
 from mine_game.domain.player import Player
 from mine_game.domain.board.mine_generator import MineGenerator
 from mine_game.domain.board.direction import Direction
+from mine_game.application.game_status import GameStatus
 import random
 
 
@@ -15,10 +16,10 @@ def run():
     game_overview = mine_game.get_overview()
 
     while True:
-        if game_overview.game_status != "InPlay":
+        if game_overview.game_status != GameStatus.Active:
             break
         user_input = input("Enter U,L,R,D\n").lower()
-        if user_input[0] in allowable_input:
+        if len(user_input) != 0 and user_input[0] in allowable_input:
             mine_game.move(convert_to_direction(user_input[0]))
             game_overview = mine_game.get_overview()
             print(
