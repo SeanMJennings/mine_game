@@ -19,6 +19,7 @@ flake8 = "^7.0.0"
 black = "^24.3.0"
 
 [tool.poetry.scripts]
+mine_game = "mine_game.cli:main"
 
 [build-system]
 requires = ["poetry_core>=1.0.0"]
@@ -32,7 +33,7 @@ testpaths = [
   "tests"
 ]
 pythonpath = [
-  ".", "src",
+  ".", "mine_game",
 ]
 
 [virtualenvs]

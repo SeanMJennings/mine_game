@@ -1,4 +1,4 @@
-from src.domain.board.direction import Direction
+from mine_game.domain.board.direction import Direction
 
 
 class Player:

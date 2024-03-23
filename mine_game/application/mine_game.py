@@ -1,6 +1,6 @@
-from src.domain.board.board import Board
-from src.domain.board.direction import Direction
-from src.domain.player import Player
+from mine_game.domain.board.board import Board
+from mine_game.domain.board.direction import Direction
+from mine_game.domain.player import Player
 
 
 class GameOverview:

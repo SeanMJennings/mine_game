@@ -1,6 +1,7 @@
-from src.application.mine_game import MineGame
-from src.domain.board.board import Board
-from src.domain.player import Player
+from mine_game.application.mine_game import MineGame
+from mine_game.domain.board.board import Board
+from mine_game.domain.player import Player
+from mine_game.domain.board.direction import Direction
 from tests.domain.board.fakes.fake_mine_generator import FakeMineGenerator
 
 mine_game = None
@@ -34,21 +35,21 @@ def the_overview_is_returned(*args):
 
 def moving_up_three_spaces(*args):
     global mine_game
-    mine_game.move("Up")
-    mine_game.move("Up")
-    mine_game.move("Up")
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
 
 
 def moving_to_top_of_board(*args):
     global mine_game
-    mine_game.move("Up")
-    mine_game.move("Up")
-    mine_game.move("Up")
-    mine_game.move("Up")
-    mine_game.move("Up")
-    mine_game.move("Up")
-    mine_game.move("Up")
-    mine_game.move("Up")
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
+    mine_game.move(Direction.up)
 
 
 def the_game_is_lost(*args):
@@ -79,7 +80,7 @@ def game_is_won(*args):
 
 def trying_to_move_player_down(*args):
     global mine_game
-    mine_game.move("Down")
+    mine_game.move(Direction.down)
 
 
 def dead_player_does_not_move(*args):

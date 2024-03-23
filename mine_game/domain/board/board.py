@@ -1,6 +1,6 @@
-from src.domain.board.direction import Direction
-from src.domain.player import Player
-from src.domain.board.mine_generator import MineGenerator
+from mine_game.domain.board.direction import Direction
+from mine_game.domain.player import Player
+from mine_game.domain.board.mine_generator import MineGenerator
 
 
 class Board:
@@ -13,7 +13,6 @@ class Board:
         self.__mines = mine_generator.generate_mines()
 
     def move_player(self, direction: Direction):
-        direction = Direction[direction.lower()]
         match direction:
             case Direction.up:
                 if self.__inside_top_of_board():
