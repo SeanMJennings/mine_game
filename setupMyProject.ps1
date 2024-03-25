@@ -1,6 +1,6 @@
 try {
-     write-host "`Found Chocolatey: " -fore yellow
      choco --version
+     write-host "`Found Chocolatey: " -fore yellow
  }
  catch {
      write-host "`Installing Chocolatey: " -fore yellow
@@ -11,8 +11,8 @@ try {
  }
  
  try {
-     write-host "nFound Python: " -fore yellow
      python --version
+     write-host "nFound Python: " -fore yellow
  }
  catch {
      write-host "nInstalling Python: " -fore yellow
@@ -28,8 +28,8 @@ catch {}
 .\.venv\Scripts\Activate.ps1
  
 try {
-    write-host "nFound Poetry: " -fore yellow
     poetry --version
+    write-host "nFound Poetry: " -fore yellow
 }
 catch {
     write-host "nInstalling Poetry: " -fore yellow
