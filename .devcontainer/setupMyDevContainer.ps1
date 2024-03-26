@@ -1,8 +1,2 @@
-try {
-    python -m venv .venv
-}
-catch {}
-
-.venv/bin/Activate.ps1
-
+poetry config virtualenvs.create false
 poetry install
