@@ -35,3 +35,7 @@ testpaths = [
 pythonpath = [
   ".", "mine_game",
 ]
+
+[virtualenvs]
+create = true
+in-project = true
