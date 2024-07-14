@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="149ed0e3-96fb-4977-95b7-13c6f6c03b11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mine_game.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="149ed0e3-96fb-4977-95b7-13c6f6c03b11" name="Changes" comment="Added pycharm config">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +27,46 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python tests.Debug Open Pytest.executor": "Debug",
+    "Python tests.Debug pytest.executor": "Run",
     "Python tests.Pytest.executor": "Run",
+    "Python tests.Python tests for board_test.test_move_player.executor": "Debug",
+    "Python.cli.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/seanj/repos/mine_game"
+    "last_opened_file_path": "C:/Users/seanj/repos/mine_game",
+    "settings.editor.selected.configurable": "preferences.externalTools"
   }
 }]]></component>
+  <component name="RunManager" selected="Python.Run mine game">
+    <configuration name="Python tests for board_test.test_move_player" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="mine_game" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/domain/board" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;board_test.test_move_player&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Run mine game" />
+      <item itemvalue="Python tests.Pytest" />
+      <item itemvalue="Python tests.Python tests for board_test.test_move_player" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Run mine game" />
+        <item itemvalue="Python tests.Python tests for board_test.test_move_player" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -55,6 +83,19 @@
       <option name="presentableId" value="Default" />
       <updated>1720949394462</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added pycharm config">
+      <option name="closed" value="true" />
+      <created>1720950485428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720950485428</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added pycharm config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pycharm config" />
   </component>
 </project>
